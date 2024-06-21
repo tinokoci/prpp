@@ -1,0 +1,190 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: "Inter", serif;
+  background: white;
+  color: black;
+}
+
+header {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  width: 60%;
+  margin: auto;
+}
+
+.nav__logo {
+  flex-grow: 1;
+}
+
+.nav__links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav__links__element {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  padding: 32px 0;
+}
+
+.nav__links__element > img {
+  width: 15px;
+  translate: 0 1px;
+}
+
+.nav__links__element__dropdown {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 5px;
+  gap: 5px;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.nav__links__element__dropdown > a {
+  display: block;
+  padding: 5px 25px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.nav__links__element__dropdown > a:hover {
+  color: white;
+  background: #1E4175;
+  border-radius: 15px;
+}
+
+.nav__links__element__dropdown > a:not(:last-child)::after {
+  content: '';
+  display: block;
+  width: 75%;
+  height: 1px;
+  background-color: gray;
+  margin: 7px auto 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav__links__element:hover > .nav__links__element__dropdown {
+  display: flex;
+}
+
+.nav__links__element:hover > img {
+  transform: rotate(180deg);
+}
+
+.erasmus__hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 450px;
+  background: url("./assets/erasmus-hero.png");
+  background-size: cover;
+  background-position-y: calc(50% + 20px);
+  font-weight: 200;
+  font-size: 48px;
+  font-style: normal;
+  line-height: 58px;
+  color: white;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+.erasmus__content {
+  margin: auto;
+  width: fit-content;
+  padding: 50px 0;
+}
+
+.erasmus__content__links {
+  display: flex;
+  gap: 20px;
+}
+
+.erasmus__content__links__element {
+  text-transform: uppercase;
+  text-decoration-line: underline;
+  color: #1E4175;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 35px;
+}
+
+.erasmus__content__section {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.erasmus__content__section > img {
+  width: 500px;
+}
+
+.erasmus__content__section__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  font-size: 18px;
+  color: #454242;
+}
+
+.erasmus__content__section__text--bold {
+  font-weight: 500;
+}
+
+.erasmus__downloadable {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.erasmus__downloadable__element {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+}
+
+.erasmus__downloadable__element > a {
+  color: #454242;
+  text-decoration: none;
+}
+
+.erasmus__downloadable__element__text {
+  border-bottom: 1px solid;
+  height: fit-content;
+}
+
+.erasmus__downloadable__element__button {
+  color: white;
+  background-color: #1E4175;
+  padding: 7px 15px;
+  border-radius: 2px;
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: #D9D9D9;
+}
